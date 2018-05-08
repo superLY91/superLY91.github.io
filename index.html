@@ -9,11 +9,15 @@
     function openService1() {
         document.location = "baiduwiki://internal?type=1001&url=https://www.baidu.com/";
     }
+    function openService2() {
+        document.location = "baiduwiki://internal?type=3002&description="这是一个TOAST"";
+    }
 </script>
 </head>
 <body>
     <input type="button" value="login" onclick="openService()" >
     <input type="button" value="video" onclick="openService1()" >
+    <input type="button" value="toast" onclick="openService2()" >
 </body>
 
 </html>
