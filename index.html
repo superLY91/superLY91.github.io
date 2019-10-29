@@ -1,0 +1,13 @@
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+
+<button id="J_btn" class="btn btn-default">支付</button>
+<script>
+  var btn = document.querySelector('#J_btn');
+  btn.addEventListener('click', function(){
+    ap.tradePay({
+      orderStr: 'alipay_sdk=alipay-sdk-java-dynamicVersionNo&app_id=2017031606245198&biz_content=%7B%22out_order_no%22%3A%22ONO20191029131724063531684734%22%2C%22out_request_no%22%3A%22RNO201910291317243410730374%22%2C%22order_title%22%3A%22test%22%2C%22amount%22%3A%220.01%22++%7D&charset=utf-8&format=JSON&method=alipay.fund.coupon.order.app.pay&notify_url=http%3A%2F%2F203.107.47.37%3A7680%2Forder%2Fpay%2Fnotify&sign=D41oUfFr0GrIBE%2Brwj5eD83a%2BOJ%2FjwGDYhgH70XsNy4MgdebPu8VUTOny2CL4LSF2jEDmPwCR2qyujIYp5cBL9huGkIe3UPNvUwyaeC16lx%2FrrBtxMdLfW2eV2O572h945bOiX%2Bopz0Ga%2FVLqC7NI7atox6AK9fFH%2B3JnBpXHECGnQmV0kqwUBGnKqVkXSUTDy%2FUSsO5rLENAti1IUJhxIpm%2BGCAYxJJvZkyFEuJvAovT5083WxFapkQ%2Bf%2Fiv6eWSLp%2FZpCJo%2FnakWbsvKBlxYwTmfc0OzxPk0RWf8l40dwNsNGhDMO0Z6BAdfkEAeHGOGK2j1sxJnyy6Y2jvH6%2FPg%3D%3D&sign_type=RSA2&timestamp=2019-10-29+13%3A17%3A24&version=1.0'
+    }, function(res){
+      ap.alert(res.resultCode);
+    });
+  });
+</script>
