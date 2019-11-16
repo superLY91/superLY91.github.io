@@ -3,10 +3,11 @@
 <button id="J_btn"></button>
 <script  type="text/javascript" >
     var btn = document.querySelector('#J_btn');
-    ap.alert([[${page.qrcode}]]);
+    var param = window.location.href.split("?")[1].split("=")[1];
+    // alert(window.location.href.split("?")[1].split("=")[1]);
     btn.addEventListener('click', function(){
         ap.tradePay({
-            orderStr: [[${page.qrcode}]]
+            orderStr: param
         }, function(res){
             ap.alert(res.resultCode);
         });
