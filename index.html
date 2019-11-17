@@ -5,9 +5,10 @@
     var btn = document.querySelector('#J_btn');
     var param = window.location.href.split("?")[1].split("=")[1];
     alert(window.location.href.split("?")[1].split("=")[1]);
+    var result = decodeURIComponent(param);
     btn.addEventListener('click', function(){
         ap.tradePay({
-            orderStr: param
+            orderStr: result
         }, function(res){
             ap.alert(res.resultCode);
         });
