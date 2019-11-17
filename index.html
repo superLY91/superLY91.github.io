@@ -3,9 +3,10 @@
 <button id="J_btn"></button>
 <script  type="text/javascript" >
     var btn = document.querySelector('#J_btn');
+    alert(window.location.href);
+    alert(window.location.href.split("?")[1]);
     var param = window.location.href.split("?")[1].split("=")[1];
     alert(window.location.href.split("?")[1].split("=")[1]);
-    var result = decodeURIComponent(param);
     btn.addEventListener('click', function(){
         ap.tradePay({
             orderStr: result
