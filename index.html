@@ -7,7 +7,7 @@
     alert(param);
     btn.addEventListener('click', function(){
         ap.tradePay({
-            orderStr: param
+            orderStr: decodeURIComponent(param)
         }, function(res){
             ap.alert(res.resultCode);
         });
